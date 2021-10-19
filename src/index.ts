@@ -1,5 +1,8 @@
 import { Client, ClientApplication, Collection, Intents } from "discord.js";
 import log from "fancy-log";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const client = new Client({
   intents: [
@@ -34,4 +37,4 @@ client.on("messageCreate", async (message) => {
   }
 });
 
-client.login("ODk5NTk3NDU1NDUxMTA3MzI4.YW1Faw.5CA_sT20mPF1qGEW5fRlrRV-EQ0");
+client.login(process.env.TOKEN);
